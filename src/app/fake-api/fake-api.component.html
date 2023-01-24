@@ -1,0 +1,24 @@
+<div class="card mb-2 cardContainer" id="card"  *ngFor="let post of posts;let i = index" style="width:20%;border:2px solid red;margin-bottom:50px">
+  <div>
+    {{post.id}}
+  </div>
+  <div>
+    {{post.body}}
+  </div>
+  <div>
+    {{post.title}}
+  </div>
+
+    <div>
+    <button (click)="addToView(i)">Favoriet</button>
+  </div>
+  <div class="card-body" *ngIf="showCard">
+
+    {{this.postIdIndex.id}}
+    {{this.postIdIndex.title}}
+    {{this.postIdIndex.body}}
+    {{this.postIdIndex.userId}}
+
+</div>
+
+
